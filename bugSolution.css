@@ -1,0 +1,27 @@
+The `calc()` function requires careful attention to detail.  Make sure all operators are correct (+, -, *, /), ensure units are compatible (e.g., don't subtract pixels from percentages), and double-check the parentheses are balanced. 
+
+For example, instead of:
+
+```css
+/* Incorrect: Unit mismatch */
+width: calc(50% - 10px);
+```
+
+Use something like:
+
+```css
+/* Correct: All in percentages or pixels */
+width: calc(50% - 10%); /* Or width: calc(100px - 10px); */
+```
+
+Another common mistake is unbalanced parentheses:
+
+```css
+/* Incorrect: Unbalanced Parentheses */
+width: calc(100px + (50% - 10px);
+```
+
+```css
+/* Correct: Balanced parentheses */
+width: calc(100px + (50% - 10px));
+```
